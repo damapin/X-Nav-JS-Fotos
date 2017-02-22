@@ -15,7 +15,7 @@
 
    </body>
    <script type="text/javascript" charset="utf-8">
-      var urls = [
+      var photoUrls = [
         "https://tse4.mm.bing.net/th?id=OIP.M015e2f407b2799498e117b0095558e83H0&pid=15.1&P=0&w=200&h=151",
         "https://tse3.mm.bing.net/th?id=OIP.M5b89b22b0ac37f2b3803d7d00a59d778o0&pid=15.1&P=0&w=249&h=167",
         "https://tse2.mm.bing.net/th?id=OIP.jf1oZUn_cCE4bfOqVmgLtQEsDI&pid=15.1&P=0&w=268&h=180",
@@ -27,9 +27,9 @@
       ];
 
       function changeImg(){
-        var i = Math.floor(Math.random()*urls.length);
+        var url = photoUrls[Math.floor(Math.random()*photoUrls.length)];
         var element = document.getElementById('imgToChange');
-        element.setAttribute("src",urls[i]);
+        element.setAttribute("src",url);
       }
       changeImg();
    </script>
