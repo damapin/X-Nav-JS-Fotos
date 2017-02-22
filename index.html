@@ -1,0 +1,36 @@
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <style type="text/css">
+     #imgToChange{
+       height: 240px;
+       width: 320px;
+     }
+     </style>
+   </head>
+   <body>
+     <h1>Random image display</h1>
+   <p><a href='javascript:changeImg()'>Get another image</a></p>
+   <img id="imgToChange" src="">
+
+   </body>
+   <script type="text/javascript" charset="utf-8">
+      var urls = [
+        "https://tse4.mm.bing.net/th?id=OIP.M015e2f407b2799498e117b0095558e83H0&pid=15.1&P=0&w=200&h=151",
+        "https://tse3.mm.bing.net/th?id=OIP.M5b89b22b0ac37f2b3803d7d00a59d778o0&pid=15.1&P=0&w=249&h=167",
+        "https://tse2.mm.bing.net/th?id=OIP.jf1oZUn_cCE4bfOqVmgLtQEsDI&pid=15.1&P=0&w=268&h=180",
+        "https://tse2.mm.bing.net/th?id=OIP.j36up9tumPeOQWtsJ8am9QEsDh&pid=15.1&P=0&w=244&h=184",
+        "https://tse4.mm.bing.net/th?id=OIP.2f2U_ljMDKtHe20azv1h7AEsDI&pid=15.1&P=0&w=251&h=168",
+        "https://tse3.mm.bing.net/th?id=OIP.M39c290c1c59df472dcd46ad2a50b74d2o0&pid=15.1&P=0&w=268&h=168",
+        "https://tse2.mm.bing.net/th?id=OIP.O7jR2VSupffsXYaiFLniSQEsDI&pid=15.1&P=0&w=246&h=164",
+        "https://tse1.mm.bing.net/th?id=OIP.eMGA0fkLWe3PSOf4MlzDdAEsDh&pid=15.1&P=0&w=220&h=166"
+      ];
+
+      function changeImg(){
+        var i = Math.floor(Math.random()*urls.length);
+        var element = document.getElementById('imgToChange');
+        element.setAttribute("src",urls[i]);
+      }
+      changeImg();
+   </script>
+</html>
